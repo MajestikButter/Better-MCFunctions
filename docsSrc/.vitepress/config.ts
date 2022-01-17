@@ -46,5 +46,5 @@ export default defineConfig({
       includeLevel: [1, 2, 3],
     },
   },
-  outDir: "./docs/",
+  outDir: "../docs/",
 });
