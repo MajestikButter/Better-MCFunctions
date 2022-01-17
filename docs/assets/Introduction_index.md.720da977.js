@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app.f60ba714.js";const f='{"title":"Introduction","description":"","frontmatter":{"title":"Introduction"},"headers":[],"relativePath":"Introduction/index.md","lastUpdated":1642391185938}',o={};function n(r,c,s,d,i,p){return a(),e("div")}var l=t(o,[["render",n]]);export{f as __pageData,l as default};

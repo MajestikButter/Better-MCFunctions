@@ -14,7 +14,7 @@ const newSideElement = (
 function getSidebar() {
   return [
     newSideElement("Introduction", "./Introduction/", [
-      newSideElement("What is This?", "./Introduction/What"),
+      newSideElement("What is This?", "./Introduction/"),
       newSideElement("Getting Started", "./Introduction/Getting Started"),
     ]),
     newSideElement("API", "./API/", [
@@ -37,8 +37,11 @@ export default defineConfig({
         text: "Home",
         link: "/",
       },
-      { text: "Github", link: "/about/" },
-      { text: "About", link: "/about/" },
+      {
+        text: "GitHub",
+        link: "https://github.com/MajestikButter/Better-MCFunctions",
+      },
+      { text: "About", link: "/Introduction/" },
     ],
   },
   markdown: {

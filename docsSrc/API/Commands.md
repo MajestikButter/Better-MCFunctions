@@ -4,9 +4,10 @@ title: API - Commands
 
 # Commands
 
-Reference for all built-in commands (excluding vanilla minecraft commands)
+Reference for all internal commands (excluding vanilla minecraft commands)
+
 ::: warning
-Built-in commands cannot be used with `/execute`
+Internal commands cannot be used with `/execute`
 :::
 
 ## Score
@@ -152,7 +153,7 @@ mcfunction @s exampleFunction 1 2 3 false true "hello world"
 
 ## Logic
 
-### `if <condition: boolean> <command>` : void
+### `if <condition: boolean> <command> : void`
 
 - Runs a command if the condition boolean is true
 
@@ -163,7 +164,7 @@ if %{$condition} say condition passed
 
 ```
 
-### `issuccess <command>` : boolean
+### `issuccess <command> : boolean`
 
 - Returns true if the provided command runs successfully
 
@@ -174,7 +175,7 @@ if %{$success} say hi
 
 ```
 
-### `return <argument: any>` : any
+### `return <argument: any> : any`
 
 - Returns the supplied argument, useful for variable assignments
 
@@ -185,6 +186,10 @@ $example = return %{$x \* 10}
 
 ```
 
-```
+### `repeat <amount: number> <command> : void`
 
+- Repeats the supplied command the specified amount of times
+
+```
+repeat 10 say hi
 ```
