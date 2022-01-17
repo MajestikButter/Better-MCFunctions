@@ -1,0 +1,6 @@
+/build
+/.regolith
+/dist
+/node_modules
+/packs
+/config.json

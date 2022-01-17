@@ -1,0 +1,46 @@
+# hello:
+$playerId = score get @p playerId
+execute @e[scores={id=($playerId)}] ~~~ say same id
+
+$stickCount = inventory @s -1 get stick 0
+give @s diamond ($stickCount)
+
+name @s set "hi"
+$playerName = name @s get
+
+mcfunction @s world $playerName $stickCount
+
+
+# world:
+$playerName = return $arg0
+$stickCount = return $arg1
+
+# sell:
+mcfunction @s sell stick 1
+mcfunction @s sell stone 2
+
+
+# sellSticks:
+mcfunction @s sell stick 1
+
+# sellStone:
+mcfunction @s sell stone 2
+
+
+# sell:
+$itemName = $args0
+
+$count = inventory @s -1 get ($itemName) 0
+give @s diamond ($count * $arg1)
+
+
+# main:
+registercmd !sellitems sellcmd
+
+# sellcmd:
+$success = issuccess testfor @s[tag=vip]
+if (not($success)) mcfunction @s sellfail
+if ($success) mcfunction @s sell
+
+# sellfail:
+tellraw @s {"rawtext":[{"text":"You cannot use this command without VIP!"}]}

@@ -1,0 +1,9 @@
+import "./chatcommand.js";
+import "./if.js";
+import "./inventory.js";
+import "./issuccess.js";
+import "./mcfunction.js";
+import "./name.js";
+import "./repeat.js";
+import "./return.js";
+import "./score.js";
