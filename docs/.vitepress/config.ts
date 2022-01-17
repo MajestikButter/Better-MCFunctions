@@ -28,8 +28,8 @@ export default defineConfig({
   title: "Better MCFunctions",
   description: "A custom version of mcfunctions that expands syntax",
   lang: "en-US",
+  base: "/Better-MCFunctions/",
   themeConfig: {
-    // base: "",
     docsDir: "docs",
     sidebar: getSidebar(),
     nav: [
@@ -37,7 +37,7 @@ export default defineConfig({
         text: "Home",
         link: "/",
       },
-      { text: 'Github', link: '/about/' },
+      { text: "Github", link: "/about/" },
       { text: "About", link: "/about/" },
     ],
   },
@@ -46,4 +46,5 @@ export default defineConfig({
       includeLevel: [1, 2, 3],
     },
   },
+  outDir: "./docs/",
 });
